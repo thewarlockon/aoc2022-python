@@ -5,7 +5,7 @@ input_path = "input.txt"
 
 # Set which part of the problem we are calculating defaults to part 1
 part=1
-if sys.argv:
+if len(sys.argv)>1:
     part=int(sys.argv[1])
 
 print("Calculating part: "+str(part)+"\n")
@@ -26,6 +26,7 @@ with open(input_path) as input_file:
                 crate_stacks[stack_number].insert(0, match.group())
             if line=='\n':
                 stack_building = False
+                print(crate_stacks)
         else:
             # Parse and perform crate movement between stacks
             quantity = int(re.search(r'(?<=move )\d+', line).group(0))
