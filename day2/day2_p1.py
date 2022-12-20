@@ -1,5 +1,3 @@
-import sys
-
 input_path = "input.txt"
 scoring_dict = {"R":1, "P":2, "S":3} #Used for scoring could be distinct from wins but not in this case
 win_dict = {"R":1, "P":2, "S":3} #Used to determine winning combinations
